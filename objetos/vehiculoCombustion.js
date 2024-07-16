@@ -8,11 +8,11 @@ class VehiculoCombustion{
         let niveltotal = cantAumento + nivel;
 
             if (niveltotal < 100 && niveltotal > 0){
-                console.log(`Carga de combustion: ${niveltotal}`)
+                return `Carga de combustion: ${niveltotal}`
             } else if (niveltotal == 100){
-                console.log(`El nivel de combustible está completo: ${niveltotal}`)
+                return `El nivel de combustible está completo: ${niveltotal}`
             }else if (niveltotal > 100){
-                console.log(`Combustion completa: 100, sobra esta cantidad: ${niveltotal-100}`)
+                return `Combustion completa: 100, sobra esta cantidad: ${niveltotal-100}`
             }
         }
     usarCombustible(cantDis){
@@ -21,9 +21,9 @@ class VehiculoCombustion{
         let niveltotal = nivel - cantDis
 
         if (niveltotal < 100 && niveltotal > 0){
-            console.log(`Decremento de combustible a: ${niveltotal}%`)
+            return `Decremento de combustible a: ${niveltotal}%`
         } else if (niveltotal <= 0){
-            console.log(`Sin combustible: ${niveltotal}%`)
+            return `Sin combustible: ${niveltotal}%`
         }
         
     }
